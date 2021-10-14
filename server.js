@@ -7,7 +7,6 @@ const mongoose = require('mongoose')
 
 mongoose.connect(process.env.CONNECTIONSTRING/*isso é uma variavel de ambiente configure a sua propria como descrito no readme do projeto*/, {useNewUrlParser: true, useUnifiedTopology: true})
 .then(() => {
-  console.log('conectado ao banco de dados')
   app.emit('conexao feita')
 })
 .catch(e => console.log('erro'))
